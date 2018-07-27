@@ -1,13 +1,14 @@
 title: NGC Summary Archive
-author: GitHub User
+author: Jesse Talavera-Greenberg
 email: jessetalavera@aol.com
 description: > # this means to ignore newlines until "twitter_username:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  An unofficial archive of the information once hosted on the National
+  Guideline Clearinghouse.
+
+repository: JesseTG/ngc-archive
 
 # social links
-twitter_username: jekyllrb
+twitter_username: JesseT_G
 github_username:  JesseTG
 rss: rss
 # dribbble_username: jekyll
@@ -27,9 +28,10 @@ rss: rss
 #   instance: example.com
 
 page_paths:
-  - summaries
+  - summary
   - tags
   - about
+  - disclaimers
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
@@ -44,9 +46,14 @@ exclude:
   - .gitignore
   - Gemfile
   - Gemfile.lock
+  - _summary/convert-to-markdown.sh
+  - _summary/convert-to-markdown.py
+  - _summary/.git
+  - _summary/.gitignore
+  - _summary/README.md
+  - _summary/requirements.txt
+  - _summary/getter.py
 
-keep_files:
-  - .git
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
 #header_pages:
@@ -58,9 +65,13 @@ theme: minima
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
-
+ - jekyll-sitemap
+ - jekyll-redirect-from
+ - jekyll-optional-front-matter
+ 
 collections:
   summary:
+    collections_dir: _summary
     output: true
     permalink: /:collection/:path/
 
