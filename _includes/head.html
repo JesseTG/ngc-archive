@@ -1,7 +1,17 @@
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+  <meta name="robots" content="index,follow">
+  <meta name="googlebot" content="index,follow">
+  <meta name="geo.region" content="US">
+  <link rel="me" href="{{ site.website }}" type="text/html">
+  <link rel="me" href="mailto:{{ site.email }}">
+  {%- if page.title -%}
+  <meta name="subject" content="{{ page.title }}">
+  {%- endif -%}
+  
   <meta name="google-site-verification" content="razZCoxTTMkDG_FPgZnZrP6f0Qm5WaboguSlQFy2pzQ" />
   {%- seo -%}
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
